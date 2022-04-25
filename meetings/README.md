@@ -3,8 +3,13 @@
 Simple automated script that provides me with the MS Teams link for my classes based on the date and time.  
 ## Who
 Created by Zac the Wise on 25/April/2022  
-## Extras
-[Rich python](https://github.com/Textualize/rich) is used to give the terminal output extra colour.  
+## How
+Using Python 3.9 with the following libraries used
+- Datetime to check the day and time
+- [Python-dotenv](https://pypi.org/project/python-dotenv/) to store the meeting links
+- OS module to load the ENV
+- Webbrowser module to open the links
+- [Rich python](https://github.com/Textualize/rich) to give the terminal output extra colour
 ## Logic
 Three functions and a main function are used.  
 
