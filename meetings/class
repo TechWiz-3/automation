@@ -3,5 +3,6 @@
 # After creating this file, do two things
 # chmod +x class
 # cp class /usr/local/bin
+# Now from any directory, type class into your bash terminal
 
 python3 /Users/Peregrine/Desktop/Projects/automation/meetings/main.py
