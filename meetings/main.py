@@ -37,16 +37,17 @@ def what_day():
 def what_time():
     """Returns if the current time is after midday or not"""
     current_date = datetime.datetime.now()
-    return (current_date.time() < datetime.time(12))
+    return (current_date.time() > datetime.time(12))
 
 def get_link():
     day = what_day()
     after_midday = what_time()
+    print(after_midday)
     if day == "mon":
         if after_midday:
             return MON_AFT
         return MON_MORN
-    elif day == "tue":
+    if day == "tue":
         if after_midday:
             return TUES_AFT
         return TUES_MORN
