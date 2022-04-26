@@ -2,6 +2,7 @@
 # emails requesting videos to
 # be downloaded
 # Created by Zac the Wise on 25/April/2022
+
 from sys import platform as get_os
 from os import system as cmd
 from rich.console import Console
