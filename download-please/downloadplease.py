@@ -9,6 +9,7 @@ from rich.console import Console
 import yagmail
 from os import getenv
 from dotenv import load_dotenv
+from plyer import notification
 
 pretty = Console()
 yag = yagmail.SMTP('programmingplus1@gmail.com')
@@ -34,8 +35,13 @@ def mac_os():
     add_subject = pretty.input("[green]Enter subject[/green] ")
     global subject
     subject += add_subject
-    yag.send(RECIPIENT, subject, contents)
-
+    try:
+        yag.send(RECIPIENT, subject, contents)
+    except:
+        print("Error occured sending email")
+        notification.notify(title='Error occured', message='Error occured sending email', app_name='Download Please App', app_icon='', timeout=10, ticker='', toast=False)
+    else:
+        notification.notify(title='Email Sent Successfully', message='Email sent successfully', app_name='Download Please App', app_icon='', timeout=10, ticker='', toast=False)
 
 def linux():
     pass
