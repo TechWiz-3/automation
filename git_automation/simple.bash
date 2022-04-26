@@ -1,4 +1,5 @@
 #!/bin/bash
+# Created by Zac the Wise
 
 convey () {
     say -v $3 $1
