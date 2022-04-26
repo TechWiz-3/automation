@@ -1,3 +1,4 @@
 yagmail
 keyring
 rich
+python-dotenv
