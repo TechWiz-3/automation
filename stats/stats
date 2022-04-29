@@ -1,0 +1,38 @@
+#!/usr/bin/bash
+
+user=$(whoami)
+date=$(date +%F)
+day=$(date +"%a")
+time=$(date +"%T")
+ip=$(ipconfig getifaddr en4)
+curl -sH 'Accept: application/vnd.github.cloak-preview' \https://api.github.com/search/commits?q=author:TechWiz-3+author-date:$date > curl_output.json
+howmany=$(grep -o '"items": *"[^"]*"' curl_output.json | grep -o '"[^"]*"$')
+kernel=$(uname -rs)
+if [ $howmany == ""] ; then
+    gitcommits=false
+else
+    gitcommits=true
+fi
+
+if [ $gitcommits == true ]; then
+    commits="X commits today"
+else
+    commits="No commits yet"
+fi
+
+echo "User: $user"
+echo "Hostname: $HOSTNAME"
+echo "Date: $date"
+echo "Day: $day""day"
+echo "Time: $time"
+echo "IP: $ip"
+echo "Commits: $commits"
+echo "Kernel: $kernel"
+while sleep 1; do
+    echo $(ps -A -o %cpu | awk '{s+=$1} END {print s "%"}')
+    echo -ne "\033[0K\r"
+done
+
+echo -e "\033[1mComputer Stats:\033[0m"
+cpuinfo=$(sysctl -n machdep.cpu.brand_string)
+echo $cpuinfo
