@@ -29,8 +29,8 @@ echo "IP: $ip"
 echo "Commits: $commits"
 echo "Kernel: $kernel"
 while sleep 1; do
-    echo $(ps -A -o %cpu | awk '{s+=$1} END {print s "%"}')
-    echo -ne "\033[0K\r"
+    cpu=$(ps -A -o %cpu | awk '{s+=$1} END {print s "%"}')
+    echo -ne "$cpu\033[0K\r"&
 done
 
 echo -e "\033[1mComputer Stats:\033[0m"
