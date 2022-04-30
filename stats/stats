@@ -1,34 +1,53 @@
 #!/usr/bin/bash
 
-echo -e "
-${GREEN#  }                 ###               ${fieldlist[0]}
-${GREEN#  }               ####                ${fieldlist[1]}
-${GREEN#  }               ###                 ${fieldlist[2]}
-${GREEN#  }       #######    #######          ${fieldlist[3]}
-${YELLOW# }     ######################        ${fieldlist[4]}
-${YELLOW# }    #####################          ${fieldlist[5]}
-${RED#    }    ####################           ${fieldlist[6]}
-${RED#    }    ####################           ${fieldlist[7]}
-${RED#    }    #####################          ${fieldlist[8]}
-${PURPLE# }     ######################        ${fieldlist[9]}
-${PURPLE# }      ####################         ${fieldlist[10]}
-${BLUE#   }        ################           ${fieldlist[11]}
-${BLUE#   }         ####     #####            ${fieldlist[12]}
-${normal}
-"
+# Inspired by archey osx (https://github.com/obihann/archey-osx/)
+# and neofetch (https://github.com/dylanaraps/neofetch)
+# A lot of the code here is a less sophisticated version of archey osx
+# However, all of it is my own code, except for the ascii apple logo
+# and the tput text colouring
 
+RED=$(tput       setaf 1 2>/dev/null)
+GREEN=$(tput     setaf 2 2>/dev/null)
+YELLOW=$(tput    setaf 3 2>/dev/null)
+BLUE=$(tput      setaf 4 2>/dev/null)
+PURPLE=$(tput    setaf 5 2>/dev/null)
+textColor=$(tput setaf 6 2>/dev/null)
+normal=$(tput    sgr0 2>/dev/null)
 
+# curl -sH 'Accept: application/vnd.github.cloak-preview' \https://api.github.com/search/commits?q=author:TechWiz-3+author-date:$date > curl_output.json
+# numberofcommits=$(jq '.total_count' curl_output.json)
+numberofcommits=0
+URL='https://www.accuweather.com/en/au/sydney/22889/weather-forecast/22889'
+curl -q "$URL" | awk -F\' '/acm_RecentLocationsCarousel\.push/{print $2": "$16", "$12"°" }'| head -1 > weather.txt
+
+# input="todo.txt"
+# while IFS= read -r line
+# do
+#   echo "$line"
+# done < "$input"
 
 clear
 while sleep 1; do
     user=$(whoami)
     date=$(date +%F)
     day=$(date +"%a")
+    if [ $day == "Sun" ]; then
+        day="Sunday"
+    elif [ $day == "Sat" ]; then
+        day="Saturday"
+    elif [ $day == "Fri" ]; then
+        day="Friday"
+    elif [ $day == "Thur" ]; then
+        day="Thursday"
+    elif [ $day == "Wed" ]; then
+        day="Wednesday"
+    elif [ $day == "Tue" ]; then
+        day="Tuesday"
+    elif [ $day == "Mon" ]; then
+        day="Monday"
+    fi
     time=$(date +"%T")
     ip=$(ipconfig getifaddr en4)
-    curl -sH 'Accept: application/vnd.github.cloak-preview' \https://api.github.com/search/commits?q=author:TechWiz-3+author-date:$date > curl_output.json
-    numberofcommits=$(jq '.total_count' curl_output.json)
-    #howmany=$(grep -o '"items": *"[^"]*"' curl_output.json | grep -o '"[^"]*"$')
     kernel=$(uname -rs)
     if [ $numberofcommits -eq 0 ] ; then
         gitcommits=false
@@ -48,17 +67,42 @@ while sleep 1; do
 
 
     tput cup 0 0
-    echo -e "
-    User: $user
-    Hostname: $HOSTNAME
-    Date: $date
-    Day: $day""day
-    Time: $time
-    IP: $ip
-    Commits: $commits
-    Kernel: $kernel
-    CPU: $cpu
-    RAM: $ram"
+    
+# echo -e "
+# User: $user
+# Hostname: $HOSTNAME
+# Date: $date
+# Day: $day
+# Time: $time
+# IP: $ip
+# Commits: $commits
+# Kernel: $kernel
+# CPU: $cpu
+# RAM: $ram
+# Temperature: $temperature"
+echo -e "
+${GREEN#  }                 ###               ${textColor}User: ${normal}$user
+${GREEN#  }               ####                ${textColor}Hostname: ${normal}$HOSTNAME
+${GREEN#  }               ###                 ${textColor}Date: ${normal}$date
+${GREEN#  }       #######    #######          ${textColor}}Day: ${normal}$day
+${YELLOW# }     ######################        ${textColor}Time: ${normal}$time
+${YELLOW# }    #####################          ${textColor}IP: ${normal}$ip
+${RED#    }    ####################           ${textColor}Commits: ${normal}$commits
+${RED#    }    ####################           ${textColor}Kernel: ${normal}$kernel
+${RED#    }    #####################          ${textColor}CPU: ${normal}$cpu
+${PURPLE# }     ######################        ${textColor}RAM: ${normal}$ram
+${PURPLE# }      ####################         ${textColor}Temperature: ${normal}$temperature
+${BLUE#   }        ################           
+${BLUE#   }         ####     #####            
+${textColor}
+ _____         _       _     _     _   
+|_   _|__   __| | ___ | |   (_)___| |_ 
+  | |/ _ \ / _\` |/ _ \| |   | / __| __|
+  | | (_) | (_| | (_) | |___| \__ \ |_ 
+  |_|\___/ \__,_|\___/|_____|_|___/\__|
+
+${normal}
+"
 done
 
 echo -e "\033[1mComputer Stats:\033[0m"
