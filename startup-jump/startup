@@ -3,10 +3,9 @@
 # Add options command
 # startup -addname "Pycord Developer" "Automation" "Random Projects" "Desktop"
 # writes each to a file then...
-#startup -addlocation "~/Desktop/desktop_folders/pycordDeveloper" etc etc
-
+# startup -addlocation "~/Desktop/desktop_folders/pycordDeveloper" etc etc
 PS3='Please enter your choice: '
-options=("Pycord Developer" "Automation" "Random Projects" "Desktop")
+options=("Pycord Developer" "Automation" "Random Projects" "Desktop" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -21,17 +20,21 @@ do
             break
             ;;
         "Random Projects")
-            echo "you chose choice $REPLY which is $opt"
             cd ~/Desktop/Projects/randomProjects
             pwd
             break
             ;;
         "Desktop")
-            echo "you chose choice $REPLY which is $opt"
             cd ~/Desktop/
             pwd
             break
             ;;
-        *) echo "invalid option $REPLY";;
+        "Quit")
+            echo "Quitting..."
+            break
+            ;;
+        *)
+            echo "invalid option $REPLY"
+            ;;
     esac
 done
