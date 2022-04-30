@@ -6,7 +6,7 @@
 #     echo "$name selected"
 # done
 
-options=("mathew" "mark" "luke" "john")
+options=("mathew" "mark" "luke" "john" "ok")
 select name in ${options[@]}
 do
     case $name in
@@ -24,6 +24,10 @@ do
 
     john)
     echo "john selected"
+    ;;
+
+    ok)
+    echo "all g"
     ;;
 
     *)
