@@ -17,17 +17,13 @@ PURPLE=$(tput    setaf 5 2>/dev/null)
 textColor=$(tput setaf 6 2>/dev/null)
 normal=$(tput    sgr0 2>/dev/null)
 
-# curl -sH 'Accept: application/vnd.github.cloak-preview' \https://api.github.com/search/commits?q=author:TechWiz-3+author-date:$date > curl_output.json
-# numberofcommits=$(jq '.total_count' curl_output.json)
-numberofcommits=0
+date=$(date +%F)
+curl -sH 'Accept: application/vnd.github.cloak-preview' https://api.github.com/search/commits?q=author:TechWiz-3+author-date:$date > curl_output.json
+numberofcommits=$(jq '.total_count' curl_output.json)
+#numberofcommits=0
 url="http://api.weatherapi.com/v1/current.json?key=$W_API_KEY&q=Sydney"
 curl -sq "$url" > weather.json
 temperature=$(jq '.current.temp_c' weather.json)
-# input="todo.txt"
-# while IFS= read -r line
-# do
-#   echo "$line"
-# done < "$input"
 
 clear
 while sleep 1; do
@@ -67,7 +63,7 @@ while sleep 1; do
     ram=$(top -l 1 -s 0 | grep PhysMem)
     remove="PhysMem: "
     ram=${ram//$remove}
-
+    todo=$(cat todo.txt)
 
     tput cup 0 0
     
@@ -93,6 +89,7 @@ ${textColor}
   |_|\___/ \__,_|\___/|_____|_|___/\__|
 
 ${normal}
+$todo
 "
 done
 echo -e "\033[1mComputer Stats:\033[0m"
