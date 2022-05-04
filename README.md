@@ -11,5 +11,5 @@ Simple automated script that provides me with the MS Teams link for my classes b
 [**`git automation`**](/git-automation)  
 A slightly heavy handed but effective way of automating git commits for MacOS devices, equipped with voice assistance and some music at the end.
 
-[**`emails`**](/emails)  
+[**`emails`**](/email)  
 Scripts that automate sending emails for various purposes
