@@ -1,7 +1,7 @@
-# Meetings
+# Title
 
 ## What
-Automated script that...
+Script that...
 
 ## Who
 Created by Zac the Wise on ...  
