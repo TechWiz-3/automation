@@ -1,0 +1,5 @@
+yagmail
+keyring
+rich
+python-dotenv
+plyer
