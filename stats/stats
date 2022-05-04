@@ -6,6 +6,8 @@
 # However, all of it is my own code, except for the ascii apple logo
 # and the tput text colouring
 
+# add public ip curl -s https://ipinfo.io/ip
+# add location (country)
 
 export $(cat .env | xargs)  # import env
 
@@ -73,7 +75,7 @@ ${GREEN#  }               ####                ${textColor}Hostname: ${normal}$HO
 ${GREEN#  }               ###                 ${textColor}Date: ${normal}$date
 ${GREEN#  }       #######    #######          ${textColor}Day: ${normal}$day
 ${YELLOW# }     ######################        ${textColor}Time: ${normal}$time
-${YELLOW# }    #####################          ${textColor}IP: ${normal}$ip
+${YELLOW# }    #####################          ${textColor}Private IP: ${normal}$ip
 ${RED#    }    ####################           ${textColor}Commits: ${normal}$commits
 ${RED#    }    ####################           ${textColor}Kernel: ${normal}$kernel
 ${RED#    }    #####################          ${textColor}CPU: ${normal}$cpu
