@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Created by Zac the Wise
+# Generic version of run_container
+# Backlogs carried over from run_container
+
+# Backlogs: switch to force only pushing, switch to specify run name, switch to specify tag name, function for the docker run thingy
+# Backlogs: docker hub integration, pull and build and run
