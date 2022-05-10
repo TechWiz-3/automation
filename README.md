@@ -1,4 +1,7 @@
 # automation
+
+[![wakatime](https://wakatime.com/badge/user/ca36faea-acc3-45d7-acc1-fb14861b9144/project/ba75e46e-10cf-4848-b68d-ef4ffad010c7.svg)](https://wakatime.com/badge/user/ca36faea-acc3-45d7-acc1-fb14861b9144/project/ba75e46e-10cf-4848-b68d-ef4ffad010c7)  
+
 Automation scripts for personal use and learning  
 
 Somewhat inspired by these [scripts](https://github.com/NARKOZ/hacker-scripts)  
