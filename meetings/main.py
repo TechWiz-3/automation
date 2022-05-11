@@ -49,7 +49,6 @@ def what_time():
 def get_link():
     day = what_day()
     after_midday = what_time()
-    print(after_midday)
     if day == "mon":
         if after_midday:
             return MON_AFT, MON_AFT_F
