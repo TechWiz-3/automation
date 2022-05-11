@@ -47,11 +47,10 @@ Inspired by `neofetch` and `archey` back when I thought that neofetch was an Arc
 ### Git automation
 
 ### Gold prices
-![Image](https://i.imgur.com/SFfs6gM.png)
 <img src="https://i.imgur.com/SFfs6gM.png" alt="Gold prices example" width="750">
 ### Meetings
-![Image](https://i.imgur.com/mxMm4ug.png)  
-![Image](https://i.imgur.com/DRAxIRJ.png)
+<img src="https://i.imgur.com/mxMm4ug.png" alt="Class command example" width="750">
+<img src="https://i.imgur.com/DRAxIRJ.png" alt="Class command example" width="750">
 ### Playlist player
 
 ### Port scanning
@@ -60,6 +59,7 @@ Inspired by `neofetch` and `archey` back when I thought that neofetch was an Arc
 
 ### Startup jump
 ![Image](https://i.imgur.com/UObZGWc.png)
+<img src="https://i.imgur.com/UObZGWc.png" alt="Startup jump example" width="750">
 
 ### Stats (still in development)
-![Image](https://i.imgur.com/1xwU9mB.png)
+<img src="https://i.imgur.com/1xwU9mB.png" alt="Stats example" width="750">
