@@ -51,7 +51,7 @@ Inspired by `neofetch` and `archey` back when I thought that neofetch was an Arc
 
 ### Meetings
 <img src="https://i.imgur.com/mxMm4ug.png" alt="Class command example" width="750">
-<img src="https://i.imgur.com/DRAxIRJ.png" alt="Class command example" width="750">
+<img src="https://i.imgur.com/PEn5ODa.png" alt="Class command example" width="750">
 
 ### Playlist player
 
