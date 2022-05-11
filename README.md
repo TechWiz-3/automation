@@ -8,6 +8,9 @@ Somewhat inspired by these [scripts](https://github.com/NARKOZ/hacker-scripts)
 
 Scripts are copied to `/usr/local/bin/` for accessibility in any directory  
 
+[**`docker automation`**](/docker-automation/)  
+Scripts that make my daily Docker work so much easier
+
 [**`emails`**](/email)  
 Scripts that automate sending emails for various purposes
 
@@ -18,7 +21,10 @@ A slightly heavy handed but effective way of automating git commits for MacOS de
 Script that displays current gold prices.  
 
 [**`meetings`**](/meetings)  
-Simple automated script that provides me with the MS Teams link for my classes based on the date and time.
+Simple automated script that provides me with the MS Teams link for my classes based on the date and time (I love this script lol).
+
+[**`playlist player`**](/playlist-player/)  
+CLI media playlist players in bash and python because I'm so tired of using iTunes or putting up with Spotify ads.
 
 [**`port scanning`**](/port-scanning/)  
 Python port scanner with some nice features (still in construction).  
