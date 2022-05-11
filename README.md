@@ -49,7 +49,8 @@ Inspired by `neofetch` and `archey` back when I thought that neofetch was an Arc
 ### Gold prices
 ![Image](https://i.imgur.com/SFfs6gM.png)
 ### Meetings
-![Image](https://i.imgur.com/mxMm4ug.png)
+![Image](https://i.imgur.com/mxMm4ug.png)  
+![Image](https://i.imgur.com/DRAxIRJ.png)
 ### Playlist player
 
 ### Port scanning
