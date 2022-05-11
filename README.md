@@ -38,3 +38,24 @@ Simple script that uses bash menus to allow you to jump to one of four most-used
 [**`stats`**](/stats/)  
 Inspired by `neofetch` and `archey` back when I thought that neofetch was an Arch exclusive tool.  
 
+## Examples
+
+### Docker automation
+
+### Emails
+
+### Git automation
+
+### Gold prices
+![Image](https://i.imgur.com/SFfs6gM.png)
+### Meetings
+
+### Playlist player
+
+### Port scanning
+
+### Speech
+
+### Startup jump
+![Image](https://i.imgur.com/npDLaI5.png)
+### Stats
