@@ -1,0 +1,6 @@
+# Playlist Player
+
+A simple CLI python tool that allows you to play music from a folder in a playlist manner.  
+No more spotify ads, no need for itunes, just a simple CLI interface to help you get what you want done as fast as possible and then be on with your work.
+
+The bash version of the project has been abandoned for the time being.
