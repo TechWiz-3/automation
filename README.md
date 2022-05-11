@@ -59,4 +59,5 @@ Inspired by `neofetch` and `archey` back when I thought that neofetch was an Arc
 ### Startup jump
 ![Image](https://i.imgur.com/npDLaI5.png)
 
-### Stats
+### Stats (still in development)
+![Image](https://i.imgur.com/1xwU9mB.png)
