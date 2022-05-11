@@ -21,7 +21,7 @@ A slightly heavy handed but effective way of automating git commits for MacOS de
 Script that displays current gold prices.  
 
 [**`meetings`**](/meetings)  
-Simple automated script that provides me with the MS Teams link for my classes based on the date and time (I love this script lol).
+Simple automated script that opens the MS Teams meeting and class work directory for my classes based on the date and time (I love this script lol).
 
 [**`playlist player`**](/playlist-player/)  
 CLI media playlist players in bash and python because I'm so tired of using iTunes or putting up with Spotify ads.
