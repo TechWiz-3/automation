@@ -84,6 +84,9 @@ if [[ $err_no -eq 125 ]] ; then
                 sudo docker stop "$dupl_cont_id"
                 sudo docker rm "$dupl_cont_id"
                 sleep 2
+                echo -n "New container name: "
+                read new_cont_name
+                sleep 2
                 echo "Initiating docker run command in 2 seconds"
                 sleep 2
                 echo $seperate
