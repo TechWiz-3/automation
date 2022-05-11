@@ -48,9 +48,11 @@ Inspired by `neofetch` and `archey` back when I thought that neofetch was an Arc
 
 ### Gold prices
 <img src="https://i.imgur.com/SFfs6gM.png" alt="Gold prices example" width="750">
+
 ### Meetings
 <img src="https://i.imgur.com/mxMm4ug.png" alt="Class command example" width="750">
 <img src="https://i.imgur.com/DRAxIRJ.png" alt="Class command example" width="750">
+
 ### Playlist player
 
 ### Port scanning
