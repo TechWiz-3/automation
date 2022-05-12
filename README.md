@@ -43,6 +43,8 @@ Inspired by `neofetch` and `archey` back when I thought that neofetch was an Arc
 ### Docker automation
 
 ### Emails
+<img src="https://i.imgur.com/oICoy3c.png" alt="Download please example" width="750">
+<img src="https://i.imgur.com/o8z4z5R.png" alt="Download please example" width="750">
 
 ### Git automation
 
