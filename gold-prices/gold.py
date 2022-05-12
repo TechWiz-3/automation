@@ -24,12 +24,16 @@ headers = {'x-access-token': API_KEY}
 
 request_response = requests.get(request_url, headers=headers)
 gold_data = json.loads(request_response.content)
-gold_price = gold_data["price"]
+try:
+    gold_price = gold_data["price"]
+except KeyError:
+    print("An error occured and the request for gold price returned an error message.")
+    gold_price = "Gold price not found"
 
 if regular_print:
     print(gold_price)
 else:
-    pretty.print(f"[#FFD700]Gold price: AUD {gold_price}/oz[/#FFD700]")
+    pretty.print(f"[#FFD700]Gold price: AUD {gold_price}/oz[/#FFD700]") # type: ignore
 
 
 
