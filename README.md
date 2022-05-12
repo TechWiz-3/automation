@@ -60,7 +60,6 @@ Inspired by `neofetch` and `archey` back when I thought that neofetch was an Arc
 ### Speech
 
 ### Startup jump
-![Image](https://i.imgur.com/UObZGWc.png)
 <img src="https://i.imgur.com/UObZGWc.png" alt="Startup jump example" width="750">
 
 ### Stats (still in development)
