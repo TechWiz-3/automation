@@ -1,0 +1,73 @@
+#!/bin/bash
+
+# Inspired and copied from
+# https://github.com/dylanaraps/neofetch/blob/master/neofetch
+
+get_term_font(){
+# get terminal name
+term_full="$TERM ${TERM_PROGRAM//_/ }"
+terminal=$(echo $term_full | awk '{print $2 " " $3}')
+
+case "${terminal}" in 
+    "Apple Terminal" )
+        term_font=$(
+            osascript -e 'tell application "Terminal" to font name of window frontmost'
+                )
+        ;;
+    "iTerm.app " )
+    # copied straight from neofetch because i have no clue what's going on here
+    # Unfortunately the profile name is not unique, but it seems to be the only thing
+            # that identifies an active profile. There is the "id of current session of current win-
+            # dow" though, but that does not match to a guid in the plist.
+            # So, be warned, collisions may occur!
+            # See: https://groups.google.com/forum/#!topic/iterm2-discuss/0tO3xZ4Zlwg
+            local current_profile_name profiles_count profile_name diff_font
+
+            current_profile_name="$(osascript <<END
+                                    tell application "iTerm2" to profile name \
+                                    of current session of current window
+END
+)"
+
+            # Warning: Dynamic profiles are not taken into account here!
+            # https://www.iterm2.com/documentation-dynamic-profiles.html
+            font_file="${HOME}/Library/Preferences/com.googlecode.iterm2.plist"
+
+            # Count Guids in "New Bookmarks"; they should be unique
+            profiles_count="$(/usr/libexec/PlistBuddy -c "Print ':New Bookmarks:'" "$font_file" | \
+                              grep -w -c "Guid")"
+
+            for ((i=0; i<profiles_count; i++)); do
+                profile_name="$(/usr/libexec/PlistBuddy -c "Print ':New Bookmarks:${i}:Name:'" "$font_file")"
+
+                if [[ "$profile_name" == "$current_profile_name" ]]; then
+                    # "Normal Font"
+                    term_font="$(/usr/libexec/PlistBuddy -c "Print ':New Bookmarks:${i}:Normal Font:'" \
+                                 "$font_file")"
+
+                    # Font for non-ascii characters
+                    # Only check for a different non-ascii font, if the user checked
+                    # the "use a different font for non-ascii text" switch.
+                    diff_font="$(/usr/libexec/PlistBuddy -c "Print ':New Bookmarks:${i}:Use Non-ASCII Font:'" \
+                                 "$font_file")"
+
+                    if [[ "$diff_font" == "true" ]]; then
+                        non_ascii="$(/usr/libexec/PlistBuddyy -c "Print ':New Bookmarks:${i}:Non Ascii Font:'" \
+                                     "$font_file")"
+
+                        [[ "$term_font" != "$non_ascii" ]] && \
+                            term_font="$term_font (normal) / $non_ascii (non-ascii)"
+                    fi
+                fi
+            done
+        ;; # end of copied block
+esac
+# if [[ "CaskaydiaCoveNerdFontComplete" = *"Nerd"* ]] ; then
+#     echo "true"
+# fi
+
+[[ "$term_font" = *"Nerd"* ]] && echo "true"
+
+}
+
+get_term_font
