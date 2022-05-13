@@ -42,6 +42,7 @@ def mac_os():
         notification.notify(title='Error occured', message='Error occured sending email', app_name='Download Please App', app_icon='', timeout=10, ticker='', toast=False) # type: ignore 
     else:
         notification.notify(title='Email Sent Successfully', message='Email sent successfully', app_name='Download Please App', app_icon='', timeout=10, ticker='', toast=False) # type: ignore 
+        pretty.print("Email sent successfully, thanks and see you next time.", style="green underline")
 
 def linux():
     pass
