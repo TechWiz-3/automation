@@ -18,6 +18,9 @@ Scripts that make my daily Docker work so much easier
 [**`emails`**](/email)  
 Scripts that automate sending emails for various purposes
 
+[**`fetch font`**](/fetch-font)  
+Small bash script that returns if "true" if the shell the script is being run in is using a nerd font. Used in my [`stats`](/stats/) script.
+
 [**`git automation`**](/git-automation)  
 A slightly heavy handed but effective way of automating git commits for MacOS devices, equipped with voice assistance and some music at the end.
 
