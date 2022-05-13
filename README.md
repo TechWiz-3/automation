@@ -78,6 +78,6 @@ Inspired by `neofetch` and `archey` back when I thought that neofetch was an Arc
 [hacker-scripts](https://github.com/NARKOZ/hacker-scripts)  
 [bash-utils](https://github.com/pirate/bash-utils)  
 [random-scripts](https://github.com/BrodieRobertson/scripts)  
-[random-scripts](https://github.com/alichtman/scripts)
-[random-scripts](https://github.com/terminalforlife/Extra)
+[random-scripts](https://github.com/alichtman/scripts)  
+[random-scripts](https://github.com/terminalforlife/Extra)  
 [bash snippets (8k stars)](https://github.com/alexanderepstein/Bash-Snippets)
