@@ -25,7 +25,6 @@ normal=$(tput    sgr0 2>/dev/null)
 date=$(date +%F)
 curl -sH 'Accept: application/vnd.github.cloak-preview' https://api.github.com/search/commits?q=author:TechWiz-3+author-date:$date > curl_output.json
 numberofcommits=$(jq '.total_count' curl_output.json)
-#numberofcommits=0
 url="http://api.weatherapi.com/v1/current.json?key=$W_API_KEY&q=Sydney"
 curl -sq "$url" > weather.json
 temperature=$(jq '.current.temp_c' weather.json)
@@ -38,7 +37,44 @@ if [[ -z "$get_font_location" ]] ; then
     chmod +x /usr/local/bin
     echo "get_font downloaded and installed"
     sleep 2
-fi    
+fi 
+
+use_icons="false"
+for arguement in "$@"
+do
+    case $arguement in
+
+        -i|--icons)
+        use_icons="true"
+        ;;
+
+        -h|--help)
+        echo "help command coming soon"
+        ;;
+
+        *)
+        echo "unrecognised argument :("
+        exit 1
+        ;;
+    esac
+done
+
+nerd_font=$(get_font)
+if [[ "$nerd_font" == "true" && "$use_icons" == "true" ]] ; then
+    icon_a=""
+    icon_b=""
+    icon_c=""
+    icon_d="﨟"
+    icon_e=""
+    icon_f=""
+    icon_g=""
+    icon_h=""
+    icon_i=""
+    icon_j=""
+    icon_k=""
+    icon_l=""
+fi
+
 
 clear
 while sleep 1; do
@@ -81,19 +117,19 @@ while sleep 1; do
     todo=$(cat todo.txt)
 
     tput cup 0 0
-#     
+   
 echo -e "
-${GREEN#  }                 ###               ${textColor} User: ${normal}$user
-${GREEN#  }               ####                ${textColor} Hostname: ${normal}$HOSTNAME
-${GREEN#  }               ###                 ${textColor} Date: ${normal}$date
-${GREEN#  }       #######    #######          ${textColor}﨟Day: ${normal}$day
-${YELLOW# }     ######################        ${textColor} Time: ${normal}$time
-${YELLOW# }    #####################          ${textColor} Private IP: ${normal}$ip
-${RED#    }    ####################           ${textColor} Commits: ${normal}$commits
-${RED#    }    ####################           ${textColor} Kernel: ${normal}$kernel
-${RED#    }    #####################          ${textColor} CPU: ${normal}$cpu    
-${PURPLE# }     ######################        ${textColor} RAM: ${normal}$ram
-${PURPLE# }      ####################         ${textColor} Temperature: ${normal}$temperature
+${GREEN#  }                 ###               ${textColor}${icon_a} User: ${normal}$user
+${GREEN#  }               ####                ${textColor}${icon_b} Hostname: ${normal}$HOSTNAME
+${GREEN#  }               ###                 ${textColor}${icon_c} Date: ${normal}$date
+${GREEN#  }       #######    #######          ${textColor}${icon_d} Day: ${normal}$day
+${YELLOW# }     ######################        ${textColor}${icon_e} Time: ${normal}$time
+${YELLOW# }    #####################          ${textColor}${icon_f} Private IP: ${normal}$ip
+${RED#    }    ####################           ${textColor}${icon_g} Commits: ${normal}$commits
+${RED#    }    ####################           ${textColor}${icon_i} Kernel: ${normal}$kernel
+${RED#    }    #####################          ${textColor}${icon_j} CPU: ${normal}$cpu    
+${PURPLE# }     ######################        ${textColor}${icon_k} RAM: ${normal}$ram
+${PURPLE# }      ####################         ${textColor}${icon_l} Temperature: ${normal}$temperature
 ${BLUE#   }        ################           
 ${BLUE#   }         ####     #####            
 ${textColor}
