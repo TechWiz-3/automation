@@ -3,17 +3,19 @@
 blue=$(tput setaf 51)
 reset=$(tput sgr0)
 purple=$(tput setaf 201) #92
+blueypurple=$(tput setaf 111)
+darkgreen=$(tput setaf 23)
 
 echo -e "
       ___                   ${blue}name${reset}        ${purple}${reset}  zac the wise
      /\__\                  ${blue}age${reset}         ${purple}${reset}  young
-    /::|  |                 ${blue}langs${reset}       ${purple}${reset}  py, sh
-   /:/:|  |                 ${blue}edu${reset}         ${purple}${reset}  tafe nsw
-  /:/|:|  |__               ${blue}kn${reset}          ${purple}歷${reset} networking,
- /:/ |:| /\__\\                          ${purple}${reset}  cloud,
- \/__|:|/:/  /                          ${purple}${reset}  linux,
-     |:/:/  /                           ${purple}${reset}  hardware
-     |::/  /                ${blue}os${reset}          ${purple}${reset}  PogOS
-     |:/  /                 ${blue}todo${reset}        ${purple}${reset}  java, tts, image recog
+    /${blueypurple}::${reset}|  |                 ${blue}langs${reset}       ${purple}${reset}  py, sh
+   /${blueypurple}:${reset}/${blueypurple}:${reset}|  |                 ${blue}edu${reset}         ${purple}${reset}  tafe nsw
+  /${blueypurple}:${reset}/|${blueypurple}:${reset}|  |__               ${blue}kn${reset}          ${purple}歷${reset} networking,
+ /${blueypurple}:${reset}/ |${blueypurple}:${reset}| /\__\\                          ${purple}${reset}  cloud,
+ \/__|${blueypurple}:${reset}|/${blueypurple}:${reset}/  /                          ${purple}${reset}  linux,
+     |${blueypurple}:${reset}/${blueypurple}:${reset}/  /                           ${purple}${reset}  hardware
+     |${blueypurple}::${reset}/  /                ${blue}os${reset}          ${purple}${reset}  PogOS
+     |${blueypurple}:${reset}/  /                 ${blue}todo${reset}        ${purple}${reset}  java, tts, image recog
      |/__/    
 "
