@@ -1,43 +1,19 @@
 #!/bin/bash
-# echo -e "
-#       ___                   name         zac the wise
-#      /\__\                  age          unknown
-#     /::|  |                 langs        py  sh
-#    /:/:|  |                 edu           tafe nsw
-#   /:/|:|  |__               kn           networking, cloud,
-#  /:/ |:| /\__\\                           linux, hardware
-#  \/__|:|/:/  /              os           PogOS
-#      |:/:/  /               todo         java, tts, image recog
-#      |::/  /  
-#      |:/  /   
-#      |/__/    
-# "
 
-
-# echo -e "
-#       ___                   name         zac the wise
-#      /\__\                  age          unknown
-#     /::|  |                 langs        py, sh
-#    /:/:|  |                 edu          tafe nsw
-#   /:/|:|  |__               kn           networking, cloud,
-#  /:/ |:| /\__\\                           linux, hardware
-#  \/__|:|/:/  /              os           PogOS
-#      |:/:/  /               todo         java, tts, image recog
-#      |::/  /  
-#      |:/  /   
-#      |/__/    
-# "
+blue=$(tput setaf 51)
+reset=$(tput sgr0)
+purple=$(tput setaf 201) #92
 
 echo -e "
-      ___                   name         zac the wise
-     /\__\                  age          unknown
-    /::|  |                 langs        py, sh
-   /:/:|  |                 edu          tafe nsw
-  /:/|:|  |__               kn           networking,
- /:/ |:| /\__\\                           cloud,
- \/__|:|/:/  /                           linux,
-     |:/:/  /                            hardware
-     |::/  /                os           PogOS
-     |:/  /                 todo         java, tts, image recog
+      ___                   ${blue}name${reset}        ${purple}${reset}  zac the wise
+     /\__\                  ${blue}age${reset}         ${purple}${reset}  young
+    /::|  |                 ${blue}langs${reset}       ${purple}${reset}  py, sh
+   /:/:|  |                 ${blue}edu${reset}         ${purple}${reset}  tafe nsw
+  /:/|:|  |__               ${blue}kn${reset}          ${purple}歷${reset} networking,
+ /:/ |:| /\__\\                          ${purple}${reset}  cloud,
+ \/__|:|/:/  /                          ${purple}${reset}  linux,
+     |:/:/  /                           ${purple}${reset}  hardware
+     |::/  /                ${blue}os${reset}          ${purple}${reset}  PogOS
+     |:/  /                 ${blue}todo${reset}        ${purple}${reset}  java, tts, image recog
      |/__/    
 "
