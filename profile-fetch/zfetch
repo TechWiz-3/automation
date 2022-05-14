@@ -1,0 +1,43 @@
+#!/bin/bash
+# echo -e "
+#       ___                   name         zac the wise
+#      /\__\                  age          unknown
+#     /::|  |                 langs        py  sh
+#    /:/:|  |                 edu           tafe nsw
+#   /:/|:|  |__               kn           networking, cloud,
+#  /:/ |:| /\__\\                           linux, hardware
+#  \/__|:|/:/  /              os           PogOS
+#      |:/:/  /               todo         java, tts, image recog
+#      |::/  /  
+#      |:/  /   
+#      |/__/    
+# "
+
+
+# echo -e "
+#       ___                   name         zac the wise
+#      /\__\                  age          unknown
+#     /::|  |                 langs        py, sh
+#    /:/:|  |                 edu          tafe nsw
+#   /:/|:|  |__               kn           networking, cloud,
+#  /:/ |:| /\__\\                           linux, hardware
+#  \/__|:|/:/  /              os           PogOS
+#      |:/:/  /               todo         java, tts, image recog
+#      |::/  /  
+#      |:/  /   
+#      |/__/    
+# "
+
+echo -e "
+      ___                   name         zac the wise
+     /\__\                  age          unknown
+    /::|  |                 langs        py, sh
+   /:/:|  |                 edu          tafe nsw
+  /:/|:|  |__               kn           networking,
+ /:/ |:| /\__\\                           cloud,
+ \/__|:|/:/  /                           linux,
+     |:/:/  /                            hardware
+     |::/  /                os           PogOS
+     |:/  /                 todo         java, tts, image recog
+     |/__/    
+"
