@@ -4,18 +4,18 @@ blue=$(tput setaf 51)
 reset=$(tput sgr0)
 purple=$(tput setaf 201) #92
 blueypurple=$(tput setaf 111)
-darkgreen=$(tput setaf 23)
+darkgreen=$(tput setaf 201) # 23 # 213 # 48
 
 echo -e "
-      ___                   ${blue}name${reset}        ${purple}${reset}  zac the wise
-     /\__\                  ${blue}age${reset}         ${purple}${reset}  young
-    /${blueypurple}::${reset}|  |                 ${blue}langs${reset}       ${purple}${reset}  py, sh
-   /${blueypurple}:${reset}/${blueypurple}:${reset}|  |                 ${blue}edu${reset}         ${purple}${reset}  tafe nsw
-  /${blueypurple}:${reset}/|${blueypurple}:${reset}|  |__               ${blue}kn${reset}          ${purple}歷${reset} networking,
- /${blueypurple}:${reset}/ |${blueypurple}:${reset}| /\__\\                          ${purple}${reset}  cloud,
- \/__|${blueypurple}:${reset}|/${blueypurple}:${reset}/  /                          ${purple}${reset}  linux,
-     |${blueypurple}:${reset}/${blueypurple}:${reset}/  /                           ${purple}${reset}  hardware
-     |${blueypurple}::${reset}/  /                ${blue}os${reset}          ${purple}${reset}  PogOS
-     |${blueypurple}:${reset}/  /                 ${blue}todo${reset}        ${purple}${reset}  java, tts, image recog
-     |/__/    
+      ${darkgreen}___                   ${blue}name${reset}        ${purple}${reset}  zac the wise
+     ${darkgreen}/\__\                  ${blue}age${darkgreen}         ${purple}${reset}  young
+    ${darkgreen}/${blueypurple}::${darkgreen}|  |                 ${blue}langs${reset}       ${purple}${reset}  py, sh
+   ${darkgreen}/${blueypurple}:${darkgreen}/${blueypurple}:${darkgreen}|  |                 ${blue}edu${reset}         ${purple}${reset}  tafe nsw
+  ${darkgreen}/${blueypurple}:${darkgreen}/|${blueypurple}:${darkgreen}|  |__               ${blue}kn${reset}          ${purple}歷${reset} networking,
+ ${darkgreen}/${blueypurple}:${darkgreen}/ |${blueypurple}:${darkgreen}| /\__\\                          ${purple}${reset}  cloud,
+ ${darkgreen}\/__|${blueypurple}:${darkgreen}|/${blueypurple}:${darkgreen}/  /                          ${purple}${reset}  linux,
+     ${darkgreen}|${blueypurple}:${darkgreen}/${blueypurple}:${darkgreen}/  /                           ${purple}${reset}  hardware
+     ${darkgreen}|${blueypurple}::${darkgreen}/  /                ${blue}os${reset}          ${purple}${reset}  PogOS
+     ${darkgreen}|${blueypurple}:${darkgreen}/  /                 ${blue}todo${reset}        ${purple}${reset}  java, tts, image recog
+     ${darkgreen}|/__/   ${reset} 
 "
