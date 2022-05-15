@@ -36,6 +36,9 @@ CLI media playlist players in bash and python because I'm so tired of using iTun
 [**`port scanning`**](/port-scanning/)  
 Python port scanner with some nice features (still in construction).  
 
+[**`profile fetch`**](/profile-fetch)  
+A bash script that prints a little info about me. A screenshot is used in my profile `README.md`
+
 [**`speech`**](/speech/)  
 Speech recognition scripts. Hang around, one day it'll be a full voice recog, text to speech, AI machine learning assistant :D  
 
