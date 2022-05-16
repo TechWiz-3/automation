@@ -6,7 +6,7 @@
 ![Image](https://img.shields.io/badge/python-3.9-informational?style=for-the-badge&logo=python&logoColor=yellow) ![Image](https://img.shields.io/badge/Bash-3.2.57-purple?style=for-the-badge&logo=gnubash) 
 
 
-Automation scripts for personal use and learning  
+Automation scripts for personal use and learning. Issues, pull requests, suggestions, stars all more than welcome :)  
 
 Somewhat inspired by these [scripts](https://github.com/NARKOZ/hacker-scripts)  
 
