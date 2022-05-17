@@ -8,7 +8,7 @@
 ![Github commit activity](https://img.shields.io/github/commit-activity/m/TechWiz-3/automation?style=flat-square)
 ![GitHub Repo stars](https://img.shields.io/github/stars/TechWiz-3/automation?style=flat-square&color=yellow)
 ![GitHub issues](https://img.shields.io/github/issues-raw/TechWiz-3/automation?style=flat-square)
-![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/TechWiz-3/automation?color=informational&style=flat-square&color=blueviolet)
+![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/TechWiz-3/automation?color=blueviolet&style=flat-square)
 
 
 Automation scripts for personal use and learning. Issues, pull requests, suggestions, stars all more than welcome :)  
