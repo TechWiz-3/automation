@@ -1,9 +1,9 @@
 # automation
 
-[![wakatime](https://wakatime.com/badge/user/ca36faea-acc3-45d7-acc1-fb14861b9144/project/ba75e46e-10cf-4848-b68d-ef4ffad010c7.svg?style=flat-sqaure)](https://wakatime.com/badge/user/ca36faea-acc3-45d7-acc1-fb14861b9144/project/ba75e46e-10cf-4848-b68d-ef4ffad010c7) 
-[![Image](https://img.shields.io/badge/License-GPLv3-blue.svg?style=for-the-badge&logo=gnu)](https://github.com/TechWiz-3/newYearsResolutionBot/blob/main/LICENSE) 
-![Image](https://img.shields.io/github/commit-activity/m/TechWiz-3/newYearsResolutionBot?color=yellowgreen&logo=git&style=for-the-badge) 
-![Image](https://img.shields.io/badge/python-3.9-informational?style=for-the-badge&logo=python&logoColor=yellow) ![Image](https://img.shields.io/badge/Bash-3.2.57-purple?style=for-the-badge&logo=gnubash) 
+[![wakatime](https://wakatime.com/badge/user/ca36faea-acc3-45d7-acc1-fb14861b9144/project/ba75e46e-10cf-4848-b68d-ef4ffad010c7.svg?style=flat-square)](https://wakatime.com/badge/user/ca36faea-acc3-45d7-acc1-fb14861b9144/project/ba75e46e-10cf-4848-b68d-ef4ffad010c7) 
+[![Image](https://img.shields.io/badge/License-GPLv3-blue.svg?style=flat-square&logo=gnu)](https://github.com/TechWiz-3/newYearsResolutionBot/blob/main/LICENSE) 
+![Image](https://img.shields.io/github/commit-activity/m/TechWiz-3/newYearsResolutionBot?color=yellowgreen&logo=git&style=flat-square) 
+![Image](https://img.shields.io/badge/python-3.9-informational?style=for-the-badge&logo=python&logoColor=yellow) ![Image](https://img.shields.io/badge/Bash-3.2.57-purple?style=flat-square&logo=gnubash) 
 
 
 Automation scripts for personal use and learning. Issues, pull requests, suggestions, stars all more than welcome :)  
