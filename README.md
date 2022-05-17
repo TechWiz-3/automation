@@ -6,9 +6,9 @@
 ![Image](https://img.shields.io/badge/python-3.9-informational?style=flat-square&logo=python&logoColor=yellow) ![Image](https://img.shields.io/badge/bash-3.2.57-purple?style=flat-square&logo=gnubash) 
 
 ![Github commit activity](https://img.shields.io/github/commit-activity/m/TechWiz-3/automation?style=flat-square)
-![GitHub Repo stars](https://img.shields.io/github/stars/TechWiz-3/automation?style=flat-square)
+![GitHub Repo stars](https://img.shields.io/github/stars/TechWiz-3/automation?style=flat-square&color=yellow)
 ![GitHub issues](https://img.shields.io/github/issues-raw/TechWiz-3/automation?style=flat-square)
-![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/TechWiz-3/automation?color=informational&style=flat-square)
+![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/TechWiz-3/automation?color=informational&style=flat-square&color=purpleviolet)
 
 
 Automation scripts for personal use and learning. Issues, pull requests, suggestions, stars all more than welcome :)  
