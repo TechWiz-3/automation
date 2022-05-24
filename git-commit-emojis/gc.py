@@ -28,7 +28,7 @@ def help():
         "\n\n"\
         "       -sh <shortcut>      puts the commit message for you as the value of 'shortcut'"\
         "\n\n"\
-        "Shortcuts:\n\nty     commit message defaults to: ✏️ FIX TYPO"\
+        "Shortcuts:\n\nty     commit message defaults to: ✏️ FIX TYPO\n\ncl     commit message defaults to: 🧹 CLEAN UP"\
         "\n\n"
     )
 
@@ -57,6 +57,9 @@ def get_opts():
                     return "error", "Shortcut value cannot be empty"
                 elif shortcut == "ty" or shortcut == "typo":
                     commit_message = "✏️ FIX TYPO"
+                    return "shortcut", commit_message
+                elif shortcut == "cl" or shortcut == "clean":
+                    commit_message = "🧹 CLEAN UP"
                     return "shortcut", commit_message
                 else:
                     return "error", "Unrecognized shortcut usage"
@@ -99,11 +102,4 @@ else:
         system(f"git commit -m \"{msg}\"")
     elif typ == "error":
         print(f"Error occured: {msg}")
-
-# label = select_menu()
-
-# if commit_msg == (None, False):
-#     print("Incorrect usage. Refer to gc.py --help")
-# else:
-#     system(f"git commit -m \"{label}{commit_msg}\"")
 
