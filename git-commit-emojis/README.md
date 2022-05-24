@@ -13,3 +13,14 @@ Here are the emoji guides mentioned above:
 
 
 The bash script compatible with UNIX based systems can be used as an alias for the basic git commit command. If you would like any extra features added please open an issue or PR.
+
+## Label Guide
+
+👌 IMPROVE <mesage>  
+📦 NEW <message>  
+📖 DOC <message>  
+🐛 FIX <message> 
+🔖 <version>  
+ 
+✏️ FIX TYPO  
+🧹 CLEAN UP
