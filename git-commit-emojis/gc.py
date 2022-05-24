@@ -7,7 +7,7 @@
 from sys import argv  # import cli arguement function
 from sys import exit  # import exit function
 from os import system
-
+ 
 def help():
     """Help command"""
     print(
