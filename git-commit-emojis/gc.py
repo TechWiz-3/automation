@@ -14,13 +14,21 @@ def help():
         "\n\n"\
         "Git emoji/labeling tool created by Zac the Wise"\
         "\n\n"\
-        "Usage:",
+        "Basic Usage:",
         "\n\n"\
         "gc -m <commit message>"\
         "\n\n"\
         "      -h, --help      shows this command"\
         "\n\n"\
         "      -m <\"message\">     commit message (required), use quotation marks"\
+        "\n\n"\
+        "Advanced Usage:"\
+        "\n\n"\
+        "The commit option can be omitted for shortcut commit messages:"\
+        "\n\n"\
+        "       -sh <shortcut>      puts the commit message for you as the value of 'shortcut'"\
+        "\n\n"\
+        "Shortcuts:\n\nty     commit message defaults to: ✏️ FIX TYPO"\
         "\n\n"
     )
 
@@ -30,8 +38,28 @@ def get_opts():
         if arg == "-m":  # message option
             # get the argument for the option
             get_arg_index = argv.index('-m')  # find the index number for the option
-            commit_message = argv[get_arg_index+1]  # get the arguement after the option and assign it
-            return commit_message
+            try:
+                commit_message = argv[get_arg_index+1]  # get the arguement after the option and assign it
+            except IndexError:
+                return "error", "You didn't include the arguement for the commit message like so: -m \"my commit message\""
+            else:
+                if commit_message == "":  # if the commit message is empty
+                    return "error", "Commit message cannot be empty"
+                return "message only", commit_message
+        elif arg == "-sh":
+            get_arg_index = argv.index('-sh')  # find the index number for the option
+            try:
+                shortcut = argv[get_arg_index+1]  # get the arguement after the option and assign it
+            except IndexError:
+                return "error", "You didn't include the arguement for the shortcut type: -sh <shortcut value>"
+            else:
+                if shortcut == "":  # if the shortcut value is empty
+                    return "error", "Shortcut value cannot be empty"
+                elif shortcut == "ty" or shortcut == "typo":
+                    commit_message = "✏️ FIX TYPO"
+                    return "shortcut", commit_message
+                else:
+                    return "error", "Unrecognized shortcut usage"
         elif arg == "-h" or arg == "--help":  # help option
             help()  # display help message
             return exit()  # stop the rest of the program from running
@@ -59,8 +87,23 @@ def select_menu():
         exit()
     return commit_label
 
-commit_msg = get_opts()
-label = select_menu()
+options = get_opts()
+if options == None:
+    print("Incorrect usage. Refer to gc.py --help")
+else:
+    typ, msg = options
+    if typ == "message only":
+        label = select_menu()
+        system(f"git commit -m \"{label}{msg}\"")
+    elif typ == "shortcut":
+        system(f"git commit -m \"{msg}\"")
+    elif typ == "error":
+        print(f"Error occured: {msg}")
 
-system(f"git commit -m \"{label}{commit_msg}\"")
+# label = select_menu()
+
+# if commit_msg == (None, False):
+#     print("Incorrect usage. Refer to gc.py --help")
+# else:
+#     system(f"git commit -m \"{label}{commit_msg}\"")
 
