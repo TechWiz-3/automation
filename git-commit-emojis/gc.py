@@ -7,7 +7,7 @@
 from sys import argv  # import cli arguement function
 from sys import exit  # import exit function
 from os import system
- 
+
 def help():
     """Help command"""
     print(
@@ -90,16 +90,17 @@ def select_menu():
         exit()
     return commit_label
 
-options = get_opts()
-if options == None:
-    print("Incorrect usage. Refer to gc.py --help")
-else:
-    typ, msg = options
-    if typ == "message only":
-        label = select_menu()
-        system(f"git commit -m \"{label}{msg}\"")
-    elif typ == "shortcut":
-        system(f"git commit -m \"{msg}\"")
-    elif typ == "error":
-        print(f"Error occured: {msg}")
+if __name__ == "__main__":
 
+    options = get_opts()
+    if options == None:
+        print("Incorrect usage. Refer to gc.py --help")
+    else:
+        typ, msg = options
+        if typ == "message only":
+            label = select_menu()
+            system(f"git commit -m \"{label}{msg}\"")
+        elif typ == "shortcut":
+            system(f"git commit -m \"{msg}\"")
+        elif typ == "error":
+            print(f"Error occured: {msg}")
