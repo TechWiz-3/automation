@@ -3,7 +3,7 @@
 We all like a bit of extra color and spice to our boring old commit messages, this not only adds that but also adds information *about* the commit.  
 
 ## The Story
-So I noticed that [this](https://github.com/msaaddev) programmer's commits always had really neat looking labels with emojis. I searched it up and found a number of repositories or gists talking about emojis for various sorts of commits.
+So I noticed that [this](https://github.com/msaaddev) programmer's commits always had really neat looking labels with emojis. I searched it up and found a number of repositories or gists talking about emojis for various sorts of commits.  
 However, I couldn't find ANY projects which automated the experience. Weird, right? Well no more, I made it for myself and at even one day old use it all the time myself.
 
 Here are the emoji guides mentioned above:  
