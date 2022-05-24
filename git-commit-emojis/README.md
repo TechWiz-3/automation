@@ -20,7 +20,7 @@ The bash script compatible with UNIX based systems can be used as an alias for t
 📦 NEW <message>  
 📖 DOC <message>  
 🐛 FIX <message> 
-🔖 <version>  
+🔖 <version>   
  
 ✏️ FIX TYPO  
 🧹 CLEAN UP
