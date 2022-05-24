@@ -19,7 +19,7 @@ The bash script compatible with UNIX based systems can be used as an alias for t
 👌 IMPROVE <mesage>  
 📦 NEW <message>  
 📖 DOC <message>  
-🐛 FIX <message> 
+🐛 FIX <message>   
 🔖 <version>   
  
 ✏️ FIX TYPO  
