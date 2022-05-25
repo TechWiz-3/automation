@@ -17,11 +17,11 @@ If you would like any extra features added please open an issue or PR.
 ## Label Guide
 ### Select Menu Options:  
 
-👌 IMPROVE <mesage>  
-📦 NEW <message>  
-📖 DOC <message>  
-🐛 FIX <message>   
-🔖 <version>   
+👌 IMPROVE \<mesage\>  
+📦 NEW \<message\>  
+📖 DOC \<message\>  
+🐛 FIX \<message\>   
+🔖 \<version\>   
 
 ### Shortcut Options:   
 ✏️ FIX TYPO  
