@@ -10,6 +10,7 @@
 ![GitHub issues](https://img.shields.io/github/issues-raw/TechWiz-3/automation?style=flat-square)
 ![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/TechWiz-3/automation?color=blueviolet&style=flat-square)
 
+## A bit of a mess up occured yesterday in the repo, I will remove this message when it's all cleaned up
 
 Automation scripts for personal use and learning. Issues, pull requests, suggestions, stars all more than welcome :)
 
