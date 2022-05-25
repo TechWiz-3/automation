@@ -1,0 +1,91 @@
+#!/bin/bash
+
+# Zac the Wise on 24 May
+# Little script that adds emojis and labels for git commits
+# More info: https://github.com/TechWiz-3/automation/tree/main/git-commit-emojis
+
+help() {
+    echo 
+    echo "Git emoji/labeling tool created by Zac the Wise"
+    echo 
+    echo "Usage:"
+    echo
+    echo "gc -m <commit message>"
+    echo
+    echo "Options:"
+    echo
+    echo "      -h      shows this command"
+    echo
+    echo "      -m <message>     commit message (required), use quotation marks"
+    echo
+
+}
+
+while getopts ":hm:" option; do
+   case $option in
+      h) # display Help
+         help
+         exit
+         ;;
+      m) # Enter a name
+        commit_msg="$OPTARG"
+        ;;
+
+     \?) # Invalid option
+         echo "Error: Invalid option"
+         exit;;
+   esac
+done
+
+if [[ -z $commit_msg ]] ; then
+    echo "Your commit message is empty, this might be because you didn't enter one, or because you didn't use the -m option"
+    exit
+fi
+
+echo "Ayo and welcome to Zac's git commit emoji labelling script"
+
+options=("👌-Improvement" "📦-Addition" "📖-Documentation" "🐛-Bug-fix" "🔖-Version-tag" "Exit")
+
+PS3='Please enter your choice: '
+select option in ${options[@]}
+    do
+    case $option in
+        👌-Improvement)
+        label="👌 IMPROVE: "
+        break
+        ;;
+
+        📦-Addition)
+        label="📦 NEW: "
+        break
+        ;;
+
+        📖-Documentation)
+        label="📖 DOC: "
+        break
+        ;;
+
+        🐛-Bug-fix)
+        label="🐛 FIX: "
+        exit
+        ;;
+
+        🔖-Version-tag)
+        label="🔖 "
+        break
+        ;;
+
+        Exit)
+        break
+        ;;
+
+        *)
+        echo "Please choose one of the available"
+    esac
+done
+
+git commit -m "${label}${commit_msg}"
+
+
+
+
