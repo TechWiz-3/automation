@@ -73,6 +73,8 @@ if [[ "$nerd_font" == "true" && "$use_icons" == "true" ]] ; then
     icon_j=""
     icon_k=""
     icon_l=""
+else
+    icon_d=" "
 fi
 
 
@@ -122,7 +124,7 @@ echo -e "
 ${GREEN#  }                 ###               ${textColor}${icon_a} User: ${normal}$user
 ${GREEN#  }               ####                ${textColor}${icon_b} Hostname: ${normal}$HOSTNAME
 ${GREEN#  }               ###                 ${textColor}${icon_c} Date: ${normal}$date
-${GREEN#  }       #######    #######          ${textColor}${icon_d} Day: ${normal}$day
+${GREEN#  }       #######    #######          ${textColor}${icon_d}Day: ${normal}$day
 ${YELLOW# }     ######################        ${textColor}${icon_e} Time: ${normal}$time
 ${YELLOW# }    #####################          ${textColor}${icon_f} Private IP: ${normal}$ip
 ${RED#    }    ####################           ${textColor}${icon_g} Commits: ${normal}$commits
