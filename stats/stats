@@ -89,7 +89,7 @@ while sleep 1; do
         day="Saturday"
     elif [ $day == "Fri" ]; then
         day="Friday"
-    elif [ $day == "Thur" ]; then
+    elif [ $day == "Thu" ]; then
         day="Thursday"
     elif [ $day == "Wed" ]; then
         day="Wednesday"
