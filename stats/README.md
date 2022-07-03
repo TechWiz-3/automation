@@ -11,7 +11,5 @@ Things you'll need to change before use:
 
 
 
-Obsessed with how it looks in the different terminal themes I have lol
-
-![Image](./screenshots/screenshot1)  
-![Image](./screenshots/screenshot2)  
+<img src=""./screenshots/screenshot1 alt="Screenshot" width="750">
+<img src=""./screenshots/screenshot2 alt="Screenshot" width="750">
