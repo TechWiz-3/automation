@@ -11,5 +11,5 @@ Things you'll need to change before use:
 
 
 
-<img src=""./screenshots/screenshot1 alt="Screenshot" width="750">
-<img src=""./screenshots/screenshot2 alt="Screenshot" width="750">
+<img src="./screenshots/screenshot1" alt="Screenshot" width="750">
+<img src="./screenshots/screenshot2" alt="Screenshot" width="750">
