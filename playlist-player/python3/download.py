@@ -20,6 +20,7 @@ while video_input.lower() != "x":
         yt_vid.streams.filter(type="audio").first().download()
     except Exception as error:
         print("Error occured")
+        print(error)
     else:
         pretty.print("[#3de048]Download successful :))[/#3de048]")
     
