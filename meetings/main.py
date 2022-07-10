@@ -71,6 +71,7 @@ def main():
     link, folder = get_link()
     if link == False:
         pretty.print("No classes today, now that's actually pog", style = "green")
+        print("")
     else:
         pretty.print("You have a class now, that's so pog :sweat_smile: :sob:", style = "bold red")
         pretty.print(link, style = "blue underline")
