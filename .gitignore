@@ -136,4 +136,5 @@ node_modules
 .swp
 curl_output.json
 weather.json
+gold_prices.json
 *.json
