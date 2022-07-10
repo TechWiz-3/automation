@@ -2,6 +2,11 @@
 
 export $(cat .env | xargs)  # load dotenv
 
+gold_light="\033[38;5;136m"
+gold_dark="\033[38;5;178m"
+bold="\033[1m"
+reset="\033[0m"
+
 current_date=$(date '+%Y%m%d')  # get the date in integer form for the request
 date_req=$(($current_date-1))  # get one day before
 
@@ -11,8 +16,8 @@ curl -skX GET "https://www.goldapi.io/api/XAU/AUD/$date_req" -H \
 price=$(jq '.price' gold_prices.json)
 
 echo -e "
-Gold prices: AUD $price/oz
-
+${bold}${gold_dark}Gold prices:${reset} AUD ${price}/oz
+${gold_light}
 ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
 ⣿⣿⣿⣿⣿⣿⣿⣟⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠏⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
 ⣿⣿⣿⣿⣿⣿⣿⣿⠀⠈⠙⢿⣿⣿⣿⣿⠟⢁⣠⣀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
@@ -27,4 +32,6 @@ Gold prices: AUD $price/oz
 ⣿⣿⣿⣿⣿⡿⠉⠻⢷⣤⣼⣧⣶⣟⠋⠁⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣶⣿⣿⣿
 ⣿⣿⣿⣿⣿⣧⣶⣿⣿⣿⣿⣿⣿⣿⣆⠀⠀⠀⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
 ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
-⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+${reset}
+"
