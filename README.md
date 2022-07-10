@@ -57,17 +57,17 @@ Inspired by `neofetch` and `archey` back when I thought that neofetch was an Arc
 ### Docker automation
 
 ### Emails
-<img src="https://i.imgur.com/oICoy3c.png" alt="Download please example" width="750">
-<img src="https://i.imgur.com/o8z4z5R.png" alt="Download please example" width="750">
+<img src="https://i.imgur.com/oICoy3c.png" alt="Download please example" width="500">
+<img src="https://i.imgur.com/o8z4z5R.png" alt="Download please example" width="500">
 
 ### Git automation
 
 ### Gold prices
-<img src="https://i.imgur.com/SFfs6gM.png" alt="Gold prices example" width="750">
+<img src="https://i.imgur.com/SFfs6gM.png" alt="Gold prices example" width="500">
 
 ### Meetings
-<img src="https://i.imgur.com/mxMm4ug.png" alt="Class command example" width="750">
-<img src="https://i.imgur.com/PEn5ODa.png" alt="Class command example" width="750">
+<img src="https://i.imgur.com/mxMm4ug.png" alt="Class command example" width="500">
+<img src="https://i.imgur.com/PEn5ODa.png" alt="Class command example" width="500">
 
 ### Playlist player
 
@@ -76,10 +76,10 @@ Inspired by `neofetch` and `archey` back when I thought that neofetch was an Arc
 ### Speech
 
 ### Startup jump
-<img src="startup-jump/screenshots/screenshot1.png" alt="Startup jump example" width="600">
+<img src="startup-jump/screenshots/screenshot1.png" alt="Startup jump example" width="500">
 
 ### Stats 
-<img src="stats/screenshots/screenshot1.png" alt="Screenshot" width="600">
+<img src="stats/screenshots/screenshot1.png" alt="Screenshot" width="500">
 
 ## Similiar projects
 [hacker-scripts](https://github.com/NARKOZ/hacker-scripts)
