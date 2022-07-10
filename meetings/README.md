@@ -10,6 +10,7 @@ Things you'll need to change before use:
    MON_MORN, MON_AFT, TUES_MORN, TUES_AFT, THUR_ALLD - these contain the meeting links
    MON_MORN_F, MON_AFT_F, TUES_MORN_F, TUES_AFT_F, THUR_ALLD_F - these contain the paths to the class folders
 4. Adjust the get_link function and the env variable names if necessary to fit your schedule
+5. If on windows replace line 79 (which opens the folder) with this solution https://stackoverflow.com/questions/47812372/python-how-to-open-a-folder-on-windows-explorerpython-3-6-2-windows-10
 ```
 
 ## What
