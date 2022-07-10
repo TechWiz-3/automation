@@ -1,6 +1,7 @@
 #!/bin/bash
 
-# After creating this file, do two things
+# After editing the file path,
+# do two things
 # chmod +x class
 # cp class /usr/local/bin
 # Now from any directory, type class into your bash terminal
