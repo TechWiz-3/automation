@@ -5,11 +5,10 @@ Things you'll need to change before use:
 ```
 1. Line 8 of class - change the path to your own
 2. Follow installation guide as specified in lines 3-7 of class
-(Please note if on windows, the class shell script likely won't
-work outside of git bash, however the python script should work fine)
+   (Please note if on windows, the class shell script likely won't work outside of git bash, however the python script should work fine)
 3. Create a .env with the following variables
-    MON_MORN, MON_AFT, TUES_MORN, TUES_AFT, THUR_ALLD - these contain the meeting links
-    MON_MORN_F, MON_AFT_F, TUES_MORN_F, TUES_AFT_F, THUR_ALLD_F - these contain the paths to the class folders
+   MON_MORN, MON_AFT, TUES_MORN, TUES_AFT, THUR_ALLD - these contain the meeting links
+   MON_MORN_F, MON_AFT_F, TUES_MORN_F, TUES_AFT_F, THUR_ALLD_F - these contain the paths to the class folders
 4. Adjust the get_link function and the env variable names if necessary to fit your schedule
 ```
 
