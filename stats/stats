@@ -22,6 +22,44 @@ PURPLE=$(tput    setaf 5 2>/dev/null)
 textColor=$(tput setaf 6 2>/dev/null)
 normal=$(tput    sgr0 2>/dev/null)
 
+
+use_icons="false"
+for arguement in "$@"
+do
+    case $arguement in
+
+        -i|--icons)
+        use_icons="true"
+        ;;
+
+        -h|--help)
+        echo ""
+        echo "Usage: stats [options]"
+        echo "Options:"
+        echo "   -i|--icons        displays nerd font icons with the text"
+        echo "   -h|--help         displays this output"
+        echo "   -s|--static       displays the information once, outside of a loop"
+        echo "  -nc|--no-clear    does not clear the screen before displaying stats"
+        echo "                     can only be used effectively with the --static option"
+        echo ""
+        exit
+        ;;
+
+        -s|--static)
+        static="true"
+        ;;
+
+        -nc|--no-clear)
+        clear="false"
+        ;;
+
+        *)
+        echo "unrecognised argument :("
+        exit 1
+        ;;
+    esac
+done
+
 date=$(date +%F)
 curl -sH 'Accept: application/vnd.github.cloak-preview' https://api.github.com/search/commits?q=author:TechWiz-3+author-date:$date > curl_output.json
 numberofcommits=$(jq '.total_count' curl_output.json)
@@ -38,26 +76,6 @@ if [[ -z "$get_font_location" ]] ; then
     echo "get_font downloaded and installed"
     sleep 2
 fi 
-
-use_icons="false"
-for arguement in "$@"
-do
-    case $arguement in
-
-        -i|--icons)
-        use_icons="true"
-        ;;
-
-        -h|--help)
-        echo "help command coming soon"
-        ;;
-
-        *)
-        echo "unrecognised argument :("
-        exit 1
-        ;;
-    esac
-done
 
 nerd_font=$(get_font)
 if [[ "$nerd_font" == "true" && "$use_icons" == "true" ]] ; then
@@ -78,7 +96,12 @@ else
 fi
 
 
-clear
+if [[ "$clear" == "false" ]]
+then
+    tput sc
+else
+    clear
+fi
 while sleep 1; do
     user=$(whoami)
     date=$(date +%F)
@@ -118,8 +141,13 @@ while sleep 1; do
     ram=${ram//$remove}
     todo=$(cat todo.txt)
 
-    tput cup 0 0
    
+if [[ "$clear" == "false" ]]
+then
+    tput rc
+else
+    tput cup 0 0
+fi
 echo -e "
 ${GREEN#  }                 ###               ${textColor}${icon_a} User: ${normal}$user
 ${GREEN#  }               ####                ${textColor}${icon_b} Hostname: ${normal}$HOSTNAME
@@ -144,14 +172,9 @@ ${textColor}
 ${normal}
 $todo
 "
+if [[ "$static" == "true" ]]
+then
+    exit
+fi
 done
-echo -e "\033[1mComputer Stats:\033[0m"
-cpuinfo=$(sysctl -n machdep.cpu.brand_string)
-echo $cpuinfo
 
-# while sleep 1; do
-#     cpu=$(ps -A -o %cpu | awk '{s+=$1} END {print s "%"}')
-#     echo "$cpu"
-#     i=$((i+1))
-#     echo $i
-# done
