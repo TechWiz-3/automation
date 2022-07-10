@@ -1,5 +1,12 @@
 # Meetings
 ![Image](https://img.shields.io/badge/CROSS%20PLATFORM-YES-success?style=for-the-badge)
+
+Things you'll need to change before use:
+```
+1. Line 8 of class - change the path to your own
+2. Follow installation guide as specified in lines 3-7 of class
+(Please note if on windows, the class shell script likely won't work outside of git bash, however the python script should work fine)
+
 ## What
 Simple automated script that provides me with the MS Teams link for my classes based on the date and time.  
 ## Who
