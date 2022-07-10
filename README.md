@@ -76,10 +76,10 @@ Inspired by `neofetch` and `archey` back when I thought that neofetch was an Arc
 ### Speech
 
 ### Startup jump
-<img src="startup-jump/screenshots/screenshot1.png" alt="Startup jump example" width="750">
+<img src="startup-jump/screenshots/screenshot1.png" alt="Startup jump example" width="600">
 
 ### Stats 
-<img src="stats/screenshots/screenshot1.png" alt="Screenshot" width="750">
+<img src="stats/screenshots/screenshot1.png" alt="Screenshot" width="600">
 
 ## Similiar projects
 [hacker-scripts](https://github.com/NARKOZ/hacker-scripts)
