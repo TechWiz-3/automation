@@ -63,8 +63,8 @@ Inspired by `neofetch` and `archey` back when I thought that neofetch was an Arc
 ### Git automation
 
 ### Gold prices
-<img src="gold-prices/screenshots/gold_py.png" alt="Startup jump example" width="500">
-<img src="gold-prices/screenshots/gold_bash.png" alt="Startup jump example" width="500">
+<img src="gold-prices/screenshots/gold_py.png" alt="Gold py example" width="500">
+<img src="gold-prices/screenshots/gold_bash.png" alt="Gold bash example" width="500">
 
 ### Meetings
 <img src="https://i.imgur.com/mxMm4ug.png" alt="Class command example" width="500">
