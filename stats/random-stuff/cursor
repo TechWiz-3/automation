@@ -1,0 +1,12 @@
+#!/bin/bash
+
+while true
+do
+tput sc
+echo some stuff
+echo more stuff
+tput rc
+echo different stuff
+echo ah stuff
+sleep 3
+done
