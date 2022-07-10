@@ -1,5 +1,5 @@
 # Meetings
-![Image](https://img.shields.io/badge/CROSS%20PLATFORM-YES-critical&style=for-the-badge)
+![Image](https://img.shields.io/badge/CROSS%20PLATFORM-YES-success?style=for-the-badge)
 ## What
 Simple automated script that provides me with the MS Teams link for my classes based on the date and time.  
 ## Who
