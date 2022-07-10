@@ -67,7 +67,7 @@ Inspired by `neofetch` and `archey` back when I thought that neofetch was an Arc
 <img src="gold-prices/screenshots/gold_bash.png" alt="Gold bash example" width="500">
 
 ### Meetings
-<img src="gold-prices/screenshots/screenshot1.png" alt="Class command example" width="500">
+<img src="meetings/screenshots/screenshot1.png" alt="Class command example" width="500">
 <img src="https://i.imgur.com/PEn5ODa.png" alt="Class command example" width="500">
 
 ### Playlist player
