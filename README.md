@@ -82,12 +82,12 @@ Inspired by `neofetch` and `archey` back when I thought that neofetch was an Arc
 <img src="stats/screenshots/screenshot1.png" alt="Screenshot" width="500">
 
 ## Similiar projects
-[hacker-scripts](https://github.com/NARKOZ/hacker-scripts)
-[bash-utils](https://github.com/pirate/bash-utils)
-[random-scripts](https://github.com/BrodieRobertson/scripts)
-[random-scripts](https://github.com/alichtman/scripts)
-[random-scripts](https://github.com/terminalforlife/Extra)
-[bash snippets (8k stars)](https://github.com/alexanderepstein/Bash-Snippets)
+* [hacker-scripts](https://github.com/NARKOZ/hacker-scripts)
+* [bash-utils](https://github.com/pirate/bash-utils)
+* [random-scripts](https://github.com/BrodieRobertson/scripts)
+* [random-scripts](https://github.com/alichtman/scripts)
+* [random-scripts](https://github.com/terminalforlife/Extra)
+* [bash snippets (8k stars)](https://github.com/alexanderepstein/Bash-Snippets)
 
 
 ---
