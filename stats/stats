@@ -6,10 +6,10 @@
 # However, all of it is my own code, except for the ascii apple logo
 # and the tput text colouring
 
-# add public ip curl -s https://ipinfo.io/ip
-# add location (country)
+# Curl output files are stored in the home directory 
+
 # add motivational quote
-# add upload and download speeds
+# add upload and download speeds option
 # news headline
 
 export $(cat .env | xargs)  # import env
@@ -39,7 +39,7 @@ do
         echo "   -i|--icons        displays nerd font icons with the text"
         echo "   -h|--help         displays this output"
         echo "   -s|--static       displays the information once, outside of a loop"
-        echo "  -nc|--no-clear    does not clear the screen before displaying stats"
+        echo "  -nc|--no-clear     does not clear the screen before displaying stats"
         echo "                     can only be used effectively with the --static option"
         echo ""
         exit
@@ -61,18 +61,17 @@ do
 done
 
 date=$(date +%F)
-curl -sH 'Accept: application/vnd.github.cloak-preview' https://api.github.com/search/commits?q=author:TechWiz-3+author-date:$date > curl_output.json
-numberofcommits=$(jq '.total_count' curl_output.json)
+curl -sH 'Accept: application/vnd.github.cloak-preview' https://api.github.com/search/commits?q=author:TechWiz-3+author-date:$date > ~/.curl_output.json
+numberofcommits=$(jq '.total_count' ~/.curl_output.json)
 url="http://api.weatherapi.com/v1/current.json?key=$W_API_KEY&q=Sydney"
-curl -sq "$url" > weather.json
-temperature=$(jq '.current.temp_c' weather.json)
+curl -sq "$url" > ~/.weather.json
+temperature=$(jq '.current.temp_c' ~/.weather.json)
 
 get_font_location=$(which get_font)
 if [[ -z "$get_font_location" ]] ; then
     echo "get_font tool not found, downloading now from https://github.com/TechWiz-3/automation/tree/main/fetch-font"
-    curl https://raw.githubusercontent.com/TechWiz-3/automation/main/fetch-font/get_font > get_font
-    cp get_font /usr/local/bin
-    chmod +x /usr/local/bin
+    curl https://raw.githubusercontent.com/TechWiz-3/automation/main/fetch-font/get_font > /usr/local/bin/get_font
+    chmod +x /usr/local/bin/get_font
     echo "get_font downloaded and installed"
     sleep 2
 fi 
