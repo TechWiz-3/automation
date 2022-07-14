@@ -4,6 +4,13 @@
 from time import sleep
 from playsound import playsound
 
+def timer(seconds: int) -> None:
+    sleep(seconds)
+    print("Times up")
+    playsound(
+        '/Users/Peregrine/Desktop/Projects/Automation/python-countdown/ringer.mp3'
+    )
+
 type = int(input("Type:\n\n1: seconds\n2: minutes\n3: hours\n"))
 how_long = int(input("How long? "))
 if type == 1:
@@ -13,9 +20,4 @@ elif type == 2:
 elif type == 3:
     timer(how_long*60*60)
 
-def timer(seconds: int) -> None:
-    sleep(how_long)
-    print("Times up")
-    playsound(
-        '/Users/Peregrine/Desktop/Projects/Automation/python-countdown/ringer.mp3'
-    )
+
