@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 cd $1
 
@@ -6,7 +6,7 @@ get_python_files=$(ls $dir | grep .py)
 
 if [[ -z "$get_python_files" ]]
 then
-	echo "nopy"
+    a=foo
 else
 	pythonfetch
 fi
