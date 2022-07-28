@@ -54,20 +54,25 @@ Inspired by `neofetch` and `archey` back when I thought that neofetch was an Arc
 
 ## Examples
 
+### Startup jump
+<img src="startup-jump/screenshots/screenshot1.png" alt="Startup jump example" width="500">
+
+### Stats 
+<img src="stats/screenshots/screenshot1.png" alt="Screenshot" width="500">
+
 ### Docker automation
 
 ### Emails
-<img src="https://i.imgur.com/oICoy3c.png" alt="Download please example" width="750">
-<img src="https://i.imgur.com/o8z4z5R.png" alt="Download please example" width="750">
-
-### Git automation
+<img src="https://i.imgur.com/oICoy3c.png" alt="Download please example" width="500">
+<img src="https://i.imgur.com/o8z4z5R.png" alt="Download please example" width="500">
 
 ### Gold prices
-<img src="https://i.imgur.com/SFfs6gM.png" alt="Gold prices example" width="750">
+<img src="gold-prices/screenshots/gold_py.png" alt="Gold py example" width="500">
+<img src="gold-prices/screenshots/gold_bash.png" alt="Gold bash example" width="500">
 
 ### Meetings
-<img src="https://i.imgur.com/mxMm4ug.png" alt="Class command example" width="750">
-<img src="https://i.imgur.com/PEn5ODa.png" alt="Class command example" width="750">
+<img src="meetings/screenshots/screenshot1.png" alt="Class command example" width="500">
+<img src="https://i.imgur.com/PEn5ODa.png" alt="Class command example" width="500">
 
 ### Playlist player
 
@@ -75,19 +80,13 @@ Inspired by `neofetch` and `archey` back when I thought that neofetch was an Arc
 
 ### Speech
 
-### Startup jump
-<img src="https://i.imgur.com/UObZGWc.png" alt="Startup jump example" width="750">
-
-### Stats (still in development)
-<img src="https://i.imgur.com/1xwU9mB.png" alt="Stats example" width="750">
-
 ## Similiar projects
-[hacker-scripts](https://github.com/NARKOZ/hacker-scripts)
-[bash-utils](https://github.com/pirate/bash-utils)
-[random-scripts](https://github.com/BrodieRobertson/scripts)
-[random-scripts](https://github.com/alichtman/scripts)
-[random-scripts](https://github.com/terminalforlife/Extra)
-[bash snippets (8k stars)](https://github.com/alexanderepstein/Bash-Snippets)
+* [hacker-scripts](https://github.com/NARKOZ/hacker-scripts)
+* [bash-utils](https://github.com/pirate/bash-utils)
+* [random-scripts](https://github.com/BrodieRobertson/scripts)
+* [random-scripts](https://github.com/alichtman/scripts)
+* [random-scripts](https://github.com/terminalforlife/Extra)
+* [bash snippets (8k stars)](https://github.com/alexanderepstein/Bash-Snippets)
 
 
 ---

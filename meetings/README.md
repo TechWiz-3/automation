@@ -1,4 +1,18 @@
 # Meetings
+![Image](https://img.shields.io/badge/CROSS%20PLATFORM-YES-success?style=for-the-badge)
+
+Things you'll need to change before use:
+```
+1. Line 8 of class - change the path to your own
+2. Follow installation guide as specified in lines 3-7 of class
+   (Please note if on windows, the class shell script likely won't work outside of git bash, however the python script should work fine)
+3. Create a .env with the following variables
+   MON_MORN, MON_AFT, TUES_MORN, TUES_AFT, THUR_ALLD - these contain the meeting links
+   MON_MORN_F, MON_AFT_F, TUES_MORN_F, TUES_AFT_F, THUR_ALLD_F - these contain the paths to the class folders
+4. Adjust the get_link function and the env variable names if necessary to fit your schedule
+5. If on windows replace line 79 (which opens the folder) with this solution https://stackoverflow.com/questions/47812372/python-how-to-open-a-folder-on-windows-explorerpython-3-6-2-windows-10
+```
+
 ## What
 Simple automated script that provides me with the MS Teams link for my classes based on the date and time.  
 ## Who

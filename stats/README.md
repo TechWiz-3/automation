@@ -2,14 +2,17 @@
 
 A bash script inspired by neofetch and archey-osx before I realised they weren't exclusive to Arch Linux.  
 
-HUGE thank you to the archey-osx project, I have learnt and copied so much from this project, GIVE IT A STAR [here](https://github.com/obihann/archey-osx). 
+HUGE thank you to the archey-osx project, I have learnt and copied so much from this project, GIVE IT A STAR [here](https://github.com/obihann/archey-osx).  
 
-Obsessed with how it looks in the different terminal themes I have lol
+Things you'll need to change before use:
+```
+1. Line 26 - replace TechWiz-3 with your github username
+2. Line 27 - replace Sydney with your city name
+3. Use a nerd font if you wish to use the icons option 
+4. Add your own items in todo.txt
+``` 
 
-![Image](https://i.imgur.com/cXrGgMj.png)  
-![Image](https://i.imgur.com/YfiDlQy.png)  
-![Image](https://i.imgur.com/GyRRemf.png)  
-![Image](https://i.imgur.com/XB9PUiN.png)  
-![Image](https://i.imgur.com/7z5VPRz.png)  
-![Image](https://i.imgur.com/msfQzlp.png)  
-![Image](https://i.imgur.com/TBZ6QWl.png)
+
+
+<img src="./screenshots/screenshot1.png" alt="Screenshot" width="750">
+<img src="./screenshots/screenshot2.png" alt="Screenshot" width="750">

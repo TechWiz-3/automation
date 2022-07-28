@@ -6,10 +6,10 @@
 # However, all of it is my own code, except for the ascii apple logo
 # and the tput text colouring
 
-# add public ip curl -s https://ipinfo.io/ip
-# add location (country)
+# Curl output files are stored in the home directory 
+
 # add motivational quote
-# add upload and download speeds
+# add upload and download speeds option
 # news headline
 
 export $(cat .env | xargs)  # import env
@@ -22,22 +22,6 @@ PURPLE=$(tput    setaf 5 2>/dev/null)
 textColor=$(tput setaf 6 2>/dev/null)
 normal=$(tput    sgr0 2>/dev/null)
 
-date=$(date +%F)
-curl -sH 'Accept: application/vnd.github.cloak-preview' https://api.github.com/search/commits?q=author:TechWiz-3+author-date:$date > curl_output.json
-numberofcommits=$(jq '.total_count' curl_output.json)
-url="http://api.weatherapi.com/v1/current.json?key=$W_API_KEY&q=Sydney"
-curl -sq "$url" > weather.json
-temperature=$(jq '.current.temp_c' weather.json)
-
-get_font_location=$(which get_font)
-if [[ -z "$get_font_location" ]] ; then
-    echo "get_font tool not found, downloading now from https://github.com/TechWiz-3/automation/tree/main/fetch-font"
-    curl https://raw.githubusercontent.com/TechWiz-3/automation/main/fetch-font/get_font > get_font
-    cp get_font /usr/local/bin
-    chmod +x /usr/local/bin
-    echo "get_font downloaded and installed"
-    sleep 2
-fi 
 
 use_icons="false"
 for arguement in "$@"
@@ -49,7 +33,24 @@ do
         ;;
 
         -h|--help)
-        echo "help command coming soon"
+        echo ""
+        echo "Usage: stats [options]"
+        echo "Options:"
+        echo "   -i|--icons        displays nerd font icons with the text"
+        echo "   -h|--help         displays this output"
+        echo "   -s|--static       displays the information once, outside of a loop"
+        echo "  -nc|--no-clear     does not clear the screen before displaying stats"
+        echo "                     can only be used effectively with the --static option"
+        echo ""
+        exit
+        ;;
+
+        -s|--static)
+        static="true"
+        ;;
+
+        -nc|--no-clear)
+        clear="false"
         ;;
 
         *)
@@ -58,6 +59,22 @@ do
         ;;
     esac
 done
+
+date=$(date +%F)
+curl -sH 'Accept: application/vnd.github.cloak-preview' https://api.github.com/search/commits?q=author:TechWiz-3+author-date:$date > ~/.curl_output.json
+numberofcommits=$(jq '.total_count' ~/.curl_output.json)
+url="http://api.weatherapi.com/v1/current.json?key=$W_API_KEY&q=Sydney"
+curl -sq "$url" > ~/.weather.json
+temperature=$(jq '.current.temp_c' ~/.weather.json)
+
+get_font_location=$(which get_font)
+if [[ -z "$get_font_location" ]] ; then
+    echo "get_font tool not found, downloading now from https://github.com/TechWiz-3/automation/tree/main/fetch-font"
+    curl https://raw.githubusercontent.com/TechWiz-3/automation/main/fetch-font/get_font > /usr/local/bin/get_font
+    chmod +x /usr/local/bin/get_font
+    echo "get_font downloaded and installed"
+    sleep 2
+fi 
 
 nerd_font=$(get_font)
 if [[ "$nerd_font" == "true" && "$use_icons" == "true" ]] ; then
@@ -78,7 +95,12 @@ else
 fi
 
 
-clear
+if [[ "$clear" == "false" ]]
+then
+    tput sc
+else
+    clear
+fi
 while sleep 1; do
     user=$(whoami)
     date=$(date +%F)
@@ -118,8 +140,13 @@ while sleep 1; do
     ram=${ram//$remove}
     todo=$(cat todo.txt)
 
-    tput cup 0 0
    
+if [[ "$clear" == "false" ]]
+then
+    tput rc
+else
+    tput cup 0 0
+fi
 echo -e "
 ${GREEN#  }                 ###               ${textColor}${icon_a} User: ${normal}$user
 ${GREEN#  }               ####                ${textColor}${icon_b} Hostname: ${normal}$HOSTNAME
@@ -144,14 +171,9 @@ ${textColor}
 ${normal}
 $todo
 "
+if [[ "$static" == "true" ]]
+then
+    exit
+fi
 done
-echo -e "\033[1mComputer Stats:\033[0m"
-cpuinfo=$(sysctl -n machdep.cpu.brand_string)
-echo $cpuinfo
 
-# while sleep 1; do
-#     cpu=$(ps -A -o %cpu | awk '{s+=$1} END {print s "%"}')
-#     echo "$cpu"
-#     i=$((i+1))
-#     echo $i
-# done

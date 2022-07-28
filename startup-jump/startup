@@ -1,31 +1,37 @@
 #!/bin/bash
 
+# Created by Zac the Wise
+# Add in you directory names and file baths for each optino
+
+# todo:
 # Add options command
 # startup -addname "Pycord Developer" "Automation" "Random Projects" "Desktop"
 # writes each to a file then...
 # startup -addlocation "~/Desktop/desktop_folders/pycordDeveloper" etc etc
+
+error="An error occured while trying to change directory. This is means the file path wasn't found"
 PS3='Please enter your choice: '
 options=("Pycord Developer" "Automation" "Random Projects" "Desktop" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
         "Pycord Developer")
-            cd ~/Desktop/desktop_folders/pycordDeveloper
+            cd ~/Desktop/desktop_folders/pycordDeveloper || echo "$error"
             pwd
             break
             ;;
         "Automation")
-            cd ~/Desktop/Projects/Automation
+            cd ~/Desktop/Projects/Automation || echo "$error"
             pwd
             break
             ;;
         "Random Projects")
-            cd ~/Desktop/Projects/randomProjects
+            cd ~/Desktop/Projects/randomProjects || echo "$error"
             pwd
             break
             ;;
         "Desktop")
-            cd ~/Desktop/
+            cd ~/Desktop/ || echo "$error"
             pwd
             break
             ;;
