@@ -1,0 +1,17 @@
+#!/bin/bash
+
+case "$1" in
+
+    tafe)
+    sudo networksetup -switchtolocation "New location TAFE"
+    networksetup -setairportpower en0 on &> /dev/null  # works but provides an error message
+    # sudo networksetup -setnetworkserviceenabled Wi-Fi on  # doesn't work for some reason
+    exit
+    ;;
+
+    *)
+    networksetup -setairportpower en0 off &> /dev/null  # works but provides an error message
+    sudo networksetup -switchtolocation "Automatic"
+    echo ayo
+    ;;
+esac
