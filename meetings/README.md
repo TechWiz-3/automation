@@ -1,7 +1,23 @@
 # Meetings
 ![Image](https://img.shields.io/badge/CROSS%20PLATFORM-YES-success?style=for-the-badge)
 
+## What
+Simple Python script that opens the MS Teams meeting for my classes as well as class folder based on the date and time.  
+
+## Who
+Created by Zac the Wise on 25/April/2022  
+
+## How
+Using Python 3.9 with the following libraries used
+- [dotenv](https://pypi.org/project/python-dotenv/) to store the meeting links
+- [Rich](https://github.com/Textualize/rich) to give the terminal output extra colour
+- Datetime to check the day and time
+- OS module to load the ENV
+- Webbrowser module to open the links
+
+## Info 
 Things you'll need to change before use:
+
 ```
 1. Line 8 of class - change the path to your own
 2. Follow installation guide as specified in lines 3-7 of class
@@ -13,17 +29,6 @@ Things you'll need to change before use:
 5. If on windows replace line 79 (which opens the folder) with this solution https://stackoverflow.com/questions/47812372/python-how-to-open-a-folder-on-windows-explorerpython-3-6-2-windows-10
 ```
 
-## What
-Simple automated script that provides me with the MS Teams link for my classes based on the date and time.  
-## Who
-Created by Zac the Wise on 25/April/2022  
-## How
-Using Python 3.9 with the following libraries used
-- Datetime to check the day and time
-- [Python-dotenv](https://pypi.org/project/python-dotenv/) to store the meeting links
-- OS module to load the ENV
-- Webbrowser module to open the links
-- [Rich python](https://github.com/Textualize/rich) to give the terminal output extra colour
 ## Logic
 Three functions and a main function are used.  
 
