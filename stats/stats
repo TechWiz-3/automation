@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 
 # Inspired by archey osx (https://github.com/obihann/archey-osx/)
 # and neofetch (https://github.com/dylanaraps/neofetch)
@@ -138,7 +138,7 @@ while sleep 1; do
     ram=$(top -l 1 -s 0 | grep PhysMem)
     remove="PhysMem: "
     ram=${ram//$remove}
-    todo=$(cat todo.txt)
+    todo=$(cat ~/.wise-todo/todo.txt)
 
    
 if [[ "$clear" == "false" ]]

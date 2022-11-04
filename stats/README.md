@@ -1,8 +1,8 @@
 # Stats
 
-A bash script inspired by neofetch and archey-osx before I realised they weren't exclusive to Arch Linux.  
+A bash script inspired by archey-osx before I realised fetch scripts were a thing!  
 
-HUGE thank you to the archey-osx project, I have learnt and copied so much from this project, GIVE IT A STAR [here](https://github.com/obihann/archey-osx).  
+Big thanks to [archey-osx](https://github.com/obihann/archey-osx), learnt a ton from this project.  
 
 Things you'll need to change before use:
 ```
@@ -12,7 +12,12 @@ Things you'll need to change before use:
 4. Add your own items in todo.txt
 ``` 
 
+## Install
+`make install`  
 
+`todo.txt` is in `~/.wise-todo/todo.txt`  
+
+## Screenshots
 
 <img src="./screenshots/screenshot1.png" alt="Screenshot" width="750">
 <img src="./screenshots/screenshot2.png" alt="Screenshot" width="750">
